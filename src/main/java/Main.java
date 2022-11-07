@@ -42,7 +42,7 @@ public class Main {
 
             }
             case 2 -> {
-                System.out.print("Podaj rok: ");
+                System.out.print("Podaj rok (1980-2022): ");
                 EasyReader rok = new EasyReader(System.in);
                 int inputYear = rok.intInput();
                 Utilities.UpFromYear(cars, carsResult, inputYear);
@@ -60,7 +60,7 @@ public class Main {
 
             }
             case 3 -> {
-                System.out.println("Podaj rok: ");
+                System.out.println("Podaj rok(1980-2022): ");
                 EasyReader rok = new EasyReader(System.in);
                 int inputYear = rok.intInput();
                 Utilities.DownFromYear(cars, carsResult, inputYear);
