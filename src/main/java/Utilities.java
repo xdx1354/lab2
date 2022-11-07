@@ -4,14 +4,14 @@ public class Utilities {
 
 
    public static void randomise(int length,List<Car>cars){
-        String []carArray = {"Lamborghini","Volvo","Audi","Skoda","Porshe","FIAT","Opel","Renault","Dacia","Mazda","POLONEZ","SYRENA"};
+
 
         for(int i=0; i<length; i++){
             Random rand = new Random();
             int p_random = 1000+ rand.nextInt(10000);
             int y_random = 1980 + rand.nextInt(42);
-            int m_random = rand.nextInt(carArray.length);
-            String make = carArray[m_random];
+
+            String make = String.valueOf(CarMake.randomCarMake());
             Car a = new Car(make,p_random,y_random);
             cars.add(a);
         }
