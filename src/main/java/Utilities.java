@@ -5,7 +5,6 @@ public class Utilities {
 
    public static void randomise(int length,List<Car>cars){
 
-
         for(int i=0; i<length; i++){
             Random rand = new Random();
             int p_random = 1000+ rand.nextInt(10000);
@@ -15,7 +14,6 @@ public class Utilities {
             Car a = new Car(make,p_random,y_random);
             cars.add(a);
         }
-
     }
 
    public static void sorting(List<Car>cars){

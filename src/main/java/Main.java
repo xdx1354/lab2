@@ -2,6 +2,13 @@ import java.util.*;
 
 import edu.colorado.io.EasyReader;
 
+/*
+INPUT FORMAT: X  R/W
+GDZIE X TO ŻĄDANA LICZBA GENEROWANYCH SAMOCHODÓW
+R - WYPISANIE LISTY W TERMINALU
+W - WYPISANIE LISTY W TERMINALU PO WYRZUCENIU WYJĄTKU MYEXCEPTION
+ */
+
 public class Main {
     public static void main (String[] Args){
 
@@ -13,8 +20,8 @@ public class Main {
 
         Utilities.randomise(numberOfCars,cars);                    //Generowanie tablicy samochodów o losowych danych
         Utilities.sorting(cars);                                   //Sortowanie tablicy samochodów
-        System.out.println(cars.size());
-        System.out.println(cars);
+//        System.out.println(cars.size());
+//        System.out.println(cars);
 
         System.out.print("Wybierz kryterium wyszukiwania: \n 1. Najstarszy \n 2. Nie starszy niż *wybrany rok* \n 3. Nie młodszy niż *wybrany rok* \n");
         EasyReader input = new EasyReader(System.in);
@@ -49,7 +56,6 @@ public class Main {
 
                 if(Objects.equals(Args[1], "R")){
                     System.out.println(carsResult);
-
                 }
 
             }
@@ -72,7 +78,6 @@ public class Main {
                 }
             }
         }
-
     }
 
     static void checkException(String outputOption,List<Car> carsResult) throws MyException{

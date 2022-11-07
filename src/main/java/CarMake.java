@@ -15,7 +15,6 @@ public enum CarMake {
     POLONEZ,
     SYRENA;
 
-
     private static final List<CarMake> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
     private static final int size = VALUES.size();
     private static final Random rand = new Random();
