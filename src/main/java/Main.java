@@ -11,8 +11,8 @@ public class Main {
         Integer numberOfCars = Integer.parseInt(Args[0]);       //Zczytuje zadaną liczbę samochodów z CLI
         String outputOption = Args[1];                          //Zczytuje R lub W z CLI
 
-        engine.randomise(numberOfCars,cars);                    //Generowanie tablicy samochodów o losowych danych
-        engine.sorting(cars);                                   //Sortowanie tablicy samochodów
+        Utilities.randomise(numberOfCars,cars);                    //Generowanie tablicy samochodów o losowych danych
+        Utilities.sorting(cars);                                   //Sortowanie tablicy samochodów
         System.out.println(cars.size());
         System.out.println(cars);
 
@@ -38,7 +38,7 @@ public class Main {
                 System.out.print("Podaj rok: ");
                 EasyReader rok = new EasyReader(System.in);
                 int inputYear = rok.intInput();
-                engine.UpFromYear(cars, carsResult, inputYear);
+                Utilities.UpFromYear(cars, carsResult, inputYear);
 
                 try{
                     checkException(outputOption,carsResult);
@@ -57,7 +57,7 @@ public class Main {
                 System.out.println("Podaj rok: ");
                 EasyReader rok = new EasyReader(System.in);
                 int inputYear = rok.intInput();
-                engine.DownFromYear(cars, carsResult, inputYear);
+                Utilities.DownFromYear(cars, carsResult, inputYear);
 
                 try{
                     checkException(outputOption,carsResult);
